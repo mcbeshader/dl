@@ -1,12 +1,13 @@
 <!DOCTYPE html>
+
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>
    Shaders
   </title>
-  <style>
+<style>
    :root {
       --primary-color: #007BFF; /* Used for other elements like borders */
       --secondary-color: #0056b3;
@@ -317,112 +318,155 @@
       }
     }
   </style>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
-  <script src="https://publisher.linkvertise.com/cdn/linkvertise.js">
-  </script>
-  <script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://publisher.linkvertise.com/cdn/linkvertise.js">
+</script>
+<script>
    linkvertise(380136, {whitelist: [], blacklist: [""]});
   </script>
- </head>
- <body>
-  <input class="global-search-bar" onkeyup="globalSearch(this.value)" placeholder="🔍 Search..." type="text"/>
-  <!-- Clickable logo directing to the new link -->
-  <a href="https://mcbeclient.github.io/dl/">
-   <img alt="Logo" class="logo" src="https://i.pinimg.com/736x/d3/1d/07/d31d07313f89289e06d6cae9a38d998e.jpg" tabindex="0"/>
-  </a>
-  <a class="lobby-link" href="https://yashofree.github.io/link/">
+</head>
+<body>
+<input class="global-search-bar" onkeyup="globalSearch(this.value)" placeholder="🔍 Search..." type="text"/>
+<!-- Clickable logo directing to the new link -->
+<a href="https://mcbeclient.github.io/dl/">
+<img alt="Logo" class="logo" src="https://i.pinimg.com/736x/d3/1d/07/d31d07313f89289e06d6cae9a38d998e.jpg" tabindex="0"/>
+</a>
+<a class="lobby-link" href="https://yashofree.github.io/link/">
    Home
   </a>
-  <div class="folder-container" id="mainSection">
-   <div class="folder-header">
-    <i class="fas fa-folder-open">
-    </i>
+<div class="folder-container" id="mainSection">
+<div class="folder-header">
+<i class="fas fa-folder-open">
+</i>
     Shaders
    </div>
-   <!-- New All button -->
-   <div class="clickable" onclick="showAllItems()">
-    <i class="fas fa-globe">
-    </i>
+<!-- New All button -->
+<div class="clickable" onclick="showAllItems()">
+<i class="fas fa-globe">
+</i>
     All
    </div>
-   <div class="clickable" onclick="showSection('packSection')">
-    <i class="fas fa-cube">
-    </i>
+<div class="clickable" onclick="showSection('packSection')">
+<i class="fas fa-cube">
+</i>
     Pack
    </div>
-   <div class="clickable" onclick="showSection('androidSection')">
-    <i class="fab fa-android">
-    </i>
+<div class="clickable" onclick="showSection('androidSection')">
+<i class="fab fa-android">
+</i>
     Patched
    </div>
-   <div class="clickable" onclick="showSection('windowsSection')">
-    <i class="fab fa-windows">
-    </i>
+<div class="clickable" onclick="showSection('windowsSection')">
+<i class="fab fa-windows">
+</i>
     Matject
    </div>
-  </div>
-  <!-- Hidden sections -->
-  <div class="hidden-section" id="packSection">
-   <header style="text-align: center; margin: 2rem 0; color: #00c3ff; text-shadow: 0 0 10px rgba(0,195,255,0.5); font-size: 2rem; animation: slideDown 0.5s ease-out;">
-    <i class="fas fa-cube">
-    </i>
-    <br/>
+</div>
+<!-- Hidden sections -->
+<div class="hidden-section" id="packSection">
+<header style="text-align: center; margin: 2rem 0; color: #00c3ff; text-shadow: 0 0 10px rgba(0,195,255,0.5); font-size: 2rem; animation: slideDown 0.5s ease-out;">
+<i class="fas fa-cube">
+</i>
+<br/>
     Pack
    </header>
-   <input class="search-bar" onkeyup="sectionSearch(this.value, 'packSection')" placeholder="🔍 Search..." type="text"/>
-   <button class="back-button" onclick="goBack()" style="animation: slideUp 0.5s ease-out;">
-    <i class="fas fa-arrow-left">
-    </i>
+<input class="search-bar" onkeyup="sectionSearch(this.value, 'packSection')" placeholder="🔍 Search..." type="text"/>
+<button class="back-button" onclick="goBack()" style="animation: slideUp 0.5s ease-out;">
+<i class="fas fa-arrow-left">
+</i>
     Back
    </button>
-  </div>
-  <div class="hidden-section" id="androidSection">
-   <header style="text-align: center; margin: 2rem 0; color: #00c3ff; text-shadow: 0 0 10px rgba(0,195,255,0.5); font-size: 2rem; animation: slideDown 0.5s ease-out;">
-    <i class="fab fa-android">
-    </i>
-    <br/>
+</div>
+<div class="hidden-section" id="androidSection">
+<header style="text-align: center; margin: 2rem 0; color: #00c3ff; text-shadow: 0 0 10px rgba(0,195,255,0.5); font-size: 2rem; animation: slideDown 0.5s ease-out;">
+<i class="fab fa-android">
+</i>
+<br/>
     Patched
    </header>
-   <input class="search-bar" onkeyup="sectionSearch(this.value, 'androidSection')" placeholder="🔍 Search..." type="text"/>
-   <button class="back-button" onclick="goBack()" style="animation: slideUp 0.5s ease-out;">
-    <i class="fas fa-arrow-left">
-    </i>
+<input class="search-bar" onkeyup="sectionSearch(this.value, 'androidSection')" placeholder="🔍 Search..." type="text"/>
+<div class="section">
+<div class="section-title">Minecraft Patched 1.21.60</div>
+<a class="download-badge" href="https://mega.nz/file/PV5jgDQA#GSWqBeOPgzUvGzzEjLgCL3w8H-uyZT9fsGMFlmk9Zeg" target="_blank">
+<i class="fas fa-download"></i> Download
+  </a>
+<img alt="Minecraft Patched 1.21.60" class="preview-image" loading="lazy" src="https://d1wzdj81h1hubn.cloudfront.net/resources/07533a7419e959a7.jpeg"/>
+</div>
+
+<div class="section">
+<div class="section-title">Minecraft Patched 1.21.51</div>
+<a class="download-badge" href="https://mega.nz/file/3EZUiZhQ#B7D3G3JU4LvDOD_TaWHfDMuHSSDO7jPyT6p7xeYxrEs" target="_blank">
+<i class="fas fa-download"></i> Download
+  </a>
+<img alt="Minecraft Patched 1.21.51" class="preview-image" loading="lazy" src="https://d1wzdj81h1hubn.cloudfront.net/resources/07533a7419e959a7.jpeg"/>
+</div>
+<div class="section">
+<div class="section-title">Minecraft Patched 1.21.50</div>
+<a class="download-badge" href="https://mega.nz/file/mdBXRTwJ#NrnMyfnP-2p2gE6PiBX-N1fdIx1XfYtMBVbc1VE7clU" target="_blank">
+<i class="fas fa-download"></i> Download
+  </a>
+<img alt="Minecraft Patched 1.21.50" class="preview-image" loading="lazy" src="https://d1wzdj81h1hubn.cloudfront.net/resources/07533a7419e959a7.jpeg"/>
+</div>
+<div class="section">
+<div class="section-title">Minecraft Patched 1.21.44</div>
+<a class="download-badge" href="https://mega.nz/file/fQxlGazb#otVRlPcPM1lEv9Nj-BmK7uEygv_q9UqjqGkVGwiNfE0" target="_blank">
+<i class="fas fa-download"></i> Download
+  </a>
+<img alt="Minecraft Patched 1.21.44" class="preview-image" loading="lazy" src="https://d1wzdj81h1hubn.cloudfront.net/resources/07533a7419e959a7.jpeg"/>
+</div>
+<div class="section">
+<div class="section-title">Minecraft Patched 1.21.41</div>
+<a class="download-badge" href="https://mega.nz/file/2chEQJCa#PnpCV8WvGMpYdgsAu0l3ZMG0MTZBCzsTg49dQ8GOjas" target="_blank">
+<i class="fas fa-download"></i> Download
+  </a>
+<img alt="Minecraft Patched 1.21.41" class="preview-image" loading="lazy" src="https://d1wzdj81h1hubn.cloudfront.net/resources/07533a7419e959a7.jpeg"/>
+</div>
+<div class="section">
+<div class="section-title">Minecraft Patched 1.21.30</div>
+<a class="download-badge" href="https://mega.nz/file/zAgA2CDI#W7_jwwLAixDlT_n-lXI665PXvVM0Vd2S-kZGKcksvPI" target="_blank">
+<i class="fas fa-download"></i> Download
+  </a>
+<img alt="Minecraft Patched 1.21.30" class="preview-image" loading="lazy" src="https://d1wzdj81h1hubn.cloudfront.net/resources/07533a7419e959a7.jpeg"/>
+</div>
+<button class="back-button" onclick="goBack()" style="animation: slideUp 0.5s ease-out;">
+<i class="fas fa-arrow-left">
+</i>
     Back
    </button>
-  </div>
-  <div class="hidden-section" id="windowsSection">
-   <header style="text-align: center; margin: 2rem 0; color: #00c3ff; text-shadow: 0 0 10px rgba(0,195,255,0.5); font-size: 2rem; animation: slideDown 0.5s ease-out;">
-    <i class="fab fa-windows">
-    </i>
-    <br/>
+</div>
+<div class="hidden-section" id="windowsSection">
+<header style="text-align: center; margin: 2rem 0; color: #00c3ff; text-shadow: 0 0 10px rgba(0,195,255,0.5); font-size: 2rem; animation: slideDown 0.5s ease-out;">
+<i class="fab fa-windows">
+</i>
+<br/>
     Matject
    </header>
-   <input class="search-bar" onkeyup="sectionSearch(this.value, 'windowsSection')" placeholder="🔍 Search..." type="text"/>
-   <button class="back-button" onclick="goBack()" style="animation: slideUp 0.5s ease-out;">
-    <i class="fas fa-arrow-left">
-    </i>
+<input class="search-bar" onkeyup="sectionSearch(this.value, 'windowsSection')" placeholder="🔍 Search..." type="text"/>
+<button class="back-button" onclick="goBack()" style="animation: slideUp 0.5s ease-out;">
+<i class="fas fa-arrow-left">
+</i>
     Back
    </button>
-  </div>
-  <!-- New All Clients hidden section -->
-  <div class="hidden-section" id="allSection">
-   <header style="text-align: center; margin: 2rem 0; color: #00c3ff; text-shadow: 0 0 10px rgba(0,195,255,0.5); font-size: 2rem; animation: slideDown 0.5s ease-out;">
-    <i class="fas fa-globe">
-    </i>
-    <br/>
+</div>
+<!-- New All Clients hidden section -->
+<div class="hidden-section" id="allSection">
+<header style="text-align: center; margin: 2rem 0; color: #00c3ff; text-shadow: 0 0 10px rgba(0,195,255,0.5); font-size: 2rem; animation: slideDown 0.5s ease-out;">
+<i class="fas fa-globe">
+</i>
+<br/>
     All
    </header>
-   <input class="search-bar" onkeyup="sectionSearch(this.value, 'allSection')" placeholder="🔍 Search..." type="text"/>
-   <!-- Container for merged items -->
-   <div id="allItemsContainer">
-   </div>
-   <button class="back-button" onclick="goBack()" style="animation: slideUp 0.5s ease-out;">
-    <i class="fas fa-arrow-left">
-    </i>
+<input class="search-bar" onkeyup="sectionSearch(this.value, 'allSection')" placeholder="🔍 Search..." type="text"/>
+<!-- Container for merged items -->
+<div id="allItemsContainer">
+</div>
+<button class="back-button" onclick="goBack()" style="animation: slideUp 0.5s ease-out;">
+<i class="fas fa-arrow-left">
+</i>
     Back
    </button>
-  </div>
-  <script>
+</div>
+<script>
    let searchTimeout;
     function globalSearch(query) {
       clearTimeout(searchTimeout);
@@ -599,5 +643,5 @@
     }
     window.addEventListener("resize", updateBackground);
   </script>
- </body>
+</body>
 </html>
